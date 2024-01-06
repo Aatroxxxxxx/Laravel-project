@@ -56,8 +56,8 @@ Route::get('/team', function(){
 Route::get('/blog', function(){
     return view('blog');
 });
-Route::get('/blog', function(){
-    return view('blog');
+Route::get('/blog-details', function(){
+    return view('blog-details');
 });
 Route::get('/blog', function(){
     return view('blog');
