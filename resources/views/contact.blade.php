@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Blog Website Template</title>
+    <title>PHPJabbers.com | Free Event Website Template</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/vendor/bootstrap1/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -48,7 +48,7 @@
     <header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="/clientdashboard"><h2>Blog <em> Website</em></h2></a>
+          <a class="navbar-brand" href="/clientdashboard"><h2>Event <em> Website</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -60,7 +60,7 @@
                 </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="/blog">Blog</a>
+                <a class="nav-link" href="/event">Event</a>
               </li>
 
               <li class="nav-item">
@@ -183,7 +183,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3 footer-item">
-            <h4>Blog Website</h4>
+            <h4>Event Website</h4>
             <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
             <ul class="social-icons">
               <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -205,7 +205,7 @@
             <ul class="menu-list">
               <li><a href="#">Home</a></li>
               <li><a href="#">About Us</a></li>
-              <li><a href="#">Blog</a></li>
+              <li><a href="#">Event</a></li>
               <li><a href="#">Contact Us</a></li>
             </ul>
           </div>

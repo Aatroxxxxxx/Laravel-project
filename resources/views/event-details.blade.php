@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Blog Website Template</title>
+    <title>PHPJabbers.com | Free Event Website Template</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/vendor/bootstrap1/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -48,7 +48,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="/clientdashboard"><h2>Blog <em> Website</em></h2></a>
+          <a class="navbar-brand" href="/clientdashboard"><h2>Event <em> Website</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -60,7 +60,7 @@
                 </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="/blog">Blog</a>
+                <a class="nav-link" href="/event">Event</a>
               </li>
 
               <li class="nav-item">
@@ -80,40 +80,42 @@
     </header>
 
     <!-- Page Content -->
-    <div class="page-heading header-text">
-      <div class="container">
+<div class="page-heading header-text">
+    <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eaque odit, temporibus quaerat asperiores velit?</h1>
-            <span><i class="fa fa-user"></i> John Doe &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="more-info about-info">
-      <div class="container">
-        <div class="more-info-content">
-          <div class="right-content">
-            <div>
-              <img src="assets/images/blog-image-fullscren-1-1920x700.jpg" class="img-fluid" alt="">
+            <div class="col-md-12">
+                <h1>{{ $event->title }}</h1>
+                <span><i class="fa fa-user"></i> {{ $event->host->username }} &nbsp;|&nbsp; <i
+                        class="fa fa-calendar"></i> {{ $event->start_datetime }}</span>
             </div>
-            <br>
-            <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nihil magnam magni perferendis sit, inventore maxime architecto ab officia illum vitae veritatis asperiores laborum quaerat ratione omnis, possimus, sunt quae?</p>
-            
-            <h4>Lorem ipsum dolor sit amet.</h4>
-
-            <br>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus amet, corporis corrupti quod illum id autem assumenda nostrum quo, odio libero dolorum. Expedita, enim non voluptatibus qui veritatis iste ad? Voluptates natus dolor, minus culpa magnam! Iusto blanditiis beatae laudantium.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolor nemo optio facere impedit fugiat obcaecati blanditiis tempora inventore sapiente beatae aspernatur vitae fuga totam possimus eveniet, praesentium maiores! Dolorum illum voluptates ipsum aspernatur explicabo numquam, aliquid a amet, deleniti eos suscipit totam laudantium excepturi voluptatum fugiat eum nesciunt minus iste, expedita provident temporibus, alias possimus veritatis aut fugit? Eaque.</p>
-          </div>
         </div>
-      </div>
     </div>
+</div>
+
+<div class="more-info about-info">
+    <div class="container">
+        <div class="more-info-content">
+            <div class="right-content">
+                <div>
+                    <img src="assets/images/Event-image-fullscren-1-1920x700.jpg" class="img-fluid" alt="">
+                </div>
+                <br>
+                <p>{{ $event->description }}</p>
+
+                <p>{{ $event->additional_information }}</p>
+
+                <h4>{{ $event->additional_heading }}</h4>
+
+                <br>
+
+                <p>{{ $event->additional_paragraph }}</p>
+
+                <p>{{ $event->additional_paragraph_two }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <div class="callback-form contact-us">
       <div class="container">
@@ -161,7 +163,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3 footer-item">
-            <h4>Blog Website</h4>
+            <h4>Event Website</h4>
             <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
             <ul class="social-icons">
               <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -183,7 +185,7 @@
             <ul class="menu-list">
               <li><a href="#">Home</a></li>
               <li><a href="#">About Us</a></li>
-              <li><a href="#">Blog</a></li>
+              <li><a href="#">Event</a></li>
               <li><a href="#">Contact Us</a></li>
             </ul>
           </div>

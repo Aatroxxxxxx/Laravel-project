@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AuthentMiddleware;
@@ -41,8 +42,8 @@ Route::view('/admindashboard', 'adashboard');
 Route::get('/signup', [AuthController::class, 'create'])->name('client.create');
 Route::post('/signup', [AuthController::class, 'store'])->name('client.store');
 
-Route::get('/blog', function(){
-    return view('blog');
+Route::get('/event', function(){
+    return view('event');
 });
 Route::get('/about', function(){
     return view('about');
@@ -53,12 +54,11 @@ Route::get('/contact', function(){
 Route::get('/team', function(){
     return view('team');
 });
-Route::get('/blog', function(){
-    return view('blog');
+Route::get('/event-details', function(){
+    return view('event-details');
 });
-Route::get('/blog-details', function(){
-    return view('blog-details');
-});
-Route::get('/blog', function(){
-    return view('blog');
-});
+
+
+
+Route::get('/events', [EventController::class, 'index'])->name('events.index');
+Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');

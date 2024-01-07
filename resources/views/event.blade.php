@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Blog Website Template</title>
+    <title>PHPJabbers.com | Free Event Website Template</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/vendor/bootstrap1/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -47,7 +47,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="/clientdashboard"><h2>Blog <em> Website</em></h2></a>
+          <a class="navbar-brand" href="/clientdashboard"><h2>Event <em> Website</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -59,7 +59,7 @@
                 </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="/blog">Blog</a>
+                <a class="nav-link" href="/event">Event</a>
               </li>
 
               <li class="nav-item">
@@ -83,7 +83,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Read our Blog</h1>
+            <h1>Read our Event</h1>
             <span>Lorem ipsum dolor sit amet consectetur</span>
           </div>
         </div>
@@ -96,15 +96,15 @@
           <div class="col-md-8">
             <section class='tabs-content'>
               <article id='tabs-1'>
-                <img src="{{ asset('assets/img/blog-image-1-940x460.jpg') }}" alt="">
-                <h4><a href="/blog-details">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></h4>
+                <img src="{{ asset('assets/img/Event-image-1-940x460.jpg') }}" alt="">
+                <h4><a href="/Event-details">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></h4>
                 <div style="margin-bottom:10px;">
                   <span>John Doe &nbsp;|&nbsp; 27.07.2020 10:10 &nbsp;|&nbsp; 15 comments</span>
                 </div>
                 <p>Sed ut dolor in augue cursus ultrices. Vivamus mauris turpis, auctor vel facilisis in, tincidunt vel diam. Sed vitae scelerisque orci. Nunc non magna orci. Aliquam commodo mauris ante, quis posuere nibh vestibulum sit amet.</p>
                 <br>
                 <div>
-                  <a href="/blog-details" class="filled-button">Continue Reading</a>
+                  <a href="/Event-details" class="filled-button">Continue Reading</a>
                 </div>
               </article>
 
@@ -113,15 +113,15 @@
               <br>
 
               <article id='tabs-2'>
-                <img src="{{ asset('assets/img/blog-image-2-940x460.jpg') }}" alt="">
-                <h4><a href="/blog-details">Mauris lobortis quam id dictum dignissim</a></h4>
+                <img src="{{ asset('assets/img/Event-image-2-940x460.jpg') }}" alt="">
+                <h4><a href="/Event-details">Mauris lobortis quam id dictum dignissim</a></h4>
                 <div style="margin-bottom:10px;">
                   <span>John Doe &nbsp;|&nbsp; 27.07.2020 10:10 &nbsp;|&nbsp; 15 comments</span>
                 </div>
                 <p>Sed ut dolor in augue cursus ultrices. Vivamus mauris turpis, auctor vel facilisis in, tincidunt vel diam. Sed vitae scelerisque orci. Nunc non magna orci. Aliquam commodo mauris ante, quis posuere nibh vestibulum sit amet</p>
                 <br>
                 <div>
-                  <a href="/blog-details" class="filled-button">Continue Reading</a>
+                  <a href="/event-details" class="filled-button">Continue Reading</a>
                 </div>
               </article>
             </section>
@@ -138,28 +138,14 @@
               <br>
 
               <h4 class="h4">Recent posts</h4>
-
               <ul>
-                  <li>
-                      <h5 style="margin-bottom:10px;"><a href="/blog-details">Dolorum corporis ullam, reiciendis inventore est repudiandae</a></h5>
-                      <small><i class="fa fa-user"></i> John Doe &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10</small>
-                  </li>
-
-                  <li><br></li>
-
-                  <li>
-                      <h5 style="margin-bottom:10px;"><a href="/blog-details">Culpa ab quasi in rerum dolorum impedit expedita</a></h5>
-                      <small><i class="fa fa-user"></i> John Doe &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10</small>
-                  </li>
-
-                  <li><br></li>
-
-                  <li>
-                    <h5 style="margin-bottom:10px;"><a href="/blog-details">Explicabo soluta corrupti dolor doloribus optio dolorum</a></h5>
-
-                    <small><i class="fa fa-user"></i> John Doe &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10</small>
-                  </li>
-              </ul>
+                
+    @foreach($recentev as $event)
+        <li>
+            <a href="{{ route('events.show', ['id' => $event->id]) }}">{{ $event->title }}</a>
+        </li>
+    @endforeach
+</ul>
           </div>
         </div>
       </div>
@@ -175,7 +161,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3 footer-item">
-            <h4>Blog Website</h4>
+            <h4>Event Website</h4>
             <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
             <ul class="social-icons">
               <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -197,7 +183,7 @@
             <ul class="menu-list">
               <li><a href="#">Home</a></li>
               <li><a href="#">About Us</a></li>
-              <li><a href="#">Blog</a></li>
+              <li><a href="#">Event</a></li>
               <li><a href="#">Contact Us</a></li>
             </ul>
           </div>

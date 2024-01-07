@@ -29,7 +29,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Blog <em> Website</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2>event <em> Website</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -41,7 +41,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/blog">Blog</a>
+                <a class="nav-link" href="{{ route('events.index') }}">Event</a>
               </li>
 
               <li class="nav-item">
@@ -71,7 +71,7 @@
                   <h6>lorem ipsum dolor sit amet!</h6>
                   <h4>Quam temporibus accusam <br> hic ducimus quia</h4>
                   <p>Magni deserunt dolorem consectetur adipisicing elit. Corporis molestiae optio, laudantium odio quod rerum maiores, omnis unde quae illo.</p>
-                  <a href="blog.html" class="filled-button">Read More</a>
+                  <a href="event.html" class="filled-button">Read More</a>
                 </div>
             </div>
           </div>
@@ -117,7 +117,7 @@
             <br>
 
             <div class="text-center">
-              <a href="/blog.html" class="filled-button">Read More</a>
+              <a href="/event.html" class="filled-button">Read More</a>
             </div>
 
             <br>
@@ -126,18 +126,18 @@
           <div class="col-md-8">
             <section class='tabs-content'>
               <article id='tabs-1'>
-                <img src="{{ asset('assets/img/blog-image-1-940x460.jpg') }}" alt="">
-                <h4><a href="blog-details.html">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></h4>
+                <img src="{{ asset('assets/img/event-image-1-940x460.jpg') }}" alt="">
+                <h4><a href="event-details.html">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></h4>
                 <p>Sed ut dolor in augue cursus ultrices. Vivamus mauris turpis, auctor vel facilisis in, tincidunt vel diam. Sed vitae scelerisque orci. Nunc non magna orci. Aliquam commodo mauris ante, quis posuere nibh vestibulum sit amet.</p>
               </article>
               <article id='tabs-2'>
-                <img src="{{ asset('assets/img/blog-image-2-940x460.jpg') }}" alt="">
-                <h4><a href="blog-details.html">Mauris lobortis quam id dictum dignissim</a></h4>
+                <img src="{{ asset('assets/img/event-image-2-940x460.jpg') }}" alt="">
+                <h4><a href="event-details.html">Mauris lobortis quam id dictum dignissim</a></h4>
                 <p>Sed ut dolor in augue cursus ultrices. Vivamus mauris turpis, auctor vel facilisis in, tincidunt vel diam. Sed vitae scelerisque orci. Nunc non magna orci. Aliquam commodo mauris ante, quis posuere nibh vestibulum sit amet</p>
               </article>
               <article id='tabs-3'>
-                <img src="{{ asset('assets/img/blog-image-3-940x460.jpg') }}" alt="">
-                <h4><a href="blog-details.html">Class aptent taciti sociosqu ad litora torquent per</a></h4>
+                <img src="{{ asset('assets/img/event-image-3-940x460.jpg') }}" alt="">
+                <h4><a href="event-details.html">Class aptent taciti sociosqu ad litora torquent per</a></h4>
                 <p>Mauris lobortis quam id dictum dignissim. Donec pellentesque erat dolor, cursus dapibus turpis hendrerit quis. Suspendisse at suscipit arcu. Nulla sed erat lectus. Nulla facilisi. In sit amet neque sapien. Donec scelerisque mi at gravida efficitur. Nunc lacinia a est eu malesuada. Curabitur eleifend elit sapien, sed pulvinar orci luctus eget. 
                 </p>
               </article>
@@ -176,7 +176,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3 footer-item">
-            <h4>Blog Website</h4>
+            <h4>event Website</h4>
             <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
             <ul class="social-icons">
               <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
