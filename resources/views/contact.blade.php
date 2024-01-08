@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Event Website Template</title>
+    <title>Project</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/vendor/bootstrap1/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -60,7 +60,7 @@
                 </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="/event">Event</a>
+                <a class="nav-link" href="{{ route('events.index') }}">Event</a>
               </li>
 
               <li class="nav-item">
@@ -175,8 +175,7 @@
 	3. Click "Share" and choose "Embed map" tab
 	4. Copy only URL and paste it within the src="" field below
 -->
-      <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.4244539060282!2d-7.603894724944682!3d33.5942898417737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd65706e85d7%3A0x327a13462f2a3fc9!2sCentre%20Philips!5e0!3m2!1sen!2sma!4v1704654173712!5m2!1sen!2sma" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
 
     <!-- Footer Starts Here -->
     <footer>
@@ -203,10 +202,10 @@
           <div class="col-md-3 footer-item">
             <h4>Additional Pages</h4>
             <ul class="menu-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Event</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="/clientdashboard">Home</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="{{ route('events.index') }}">Event</a></li>
+              <li><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
           <div class="col-md-3 footer-item last-item">
@@ -247,8 +246,7 @@
         <div class="row">
           <div class="col-md-12">
             <p>
-                Copyright © 2020 Company Name
-                - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a>
+                Copyright © 2024 Our Company 
             </p>
           </div>
         </div>

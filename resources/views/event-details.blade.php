@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Event Website Template</title>
+    <title>Event Manager</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/vendor/bootstrap1/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -60,7 +60,7 @@
                 </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="/event">Event</a>
+                <a class="nav-link" href="/events">Event</a>
               </li>
 
               <li class="nav-item">
@@ -85,8 +85,8 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>{{ $event->title }}</h1>
-                <span><i class="fa fa-user"></i> {{ $event->host->username }} &nbsp;|&nbsp; <i
-                        class="fa fa-calendar"></i> {{ $event->start_datetime }}</span>
+                <span><i class="fa fa-user"></i> {{ $event->host->fname }} {{$event->host->lname}} &nbsp;|&nbsp; 
+                <i class="fa fa-calendar"></i> {{ $event->start_datetime }}</span>
             </div>
         </div>
     </div>
@@ -102,7 +102,7 @@
                 <br>
                 <p>{{ $event->description }}</p>
 
-                <p>{{ $event->additional_information }}</p>
+                <p>{{ $event->additional_information }} </p>
 
                 <h4>{{ $event->additional_heading }}</h4>
 
@@ -123,7 +123,6 @@
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Leave a <em>comment</em></h2>
-              <span>Suspendisse a ante in neque iaculis lacinia</span>
             </div>
           </div>
           <div class="col-md-12">
@@ -227,8 +226,7 @@
         <div class="row">
           <div class="col-md-12">
             <p>
-                Copyright © 2020 Company Name
-                - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a>
+                Copyright © 2024 Our Company 
             </p>
           </div>
         </div>

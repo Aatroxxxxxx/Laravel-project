@@ -13,7 +13,7 @@ class Event extends Model
 {
     protected $fillable = ['host_client_id', 'title', 'description', 'start_datetime', 'end_datetime', 'location'];
 
-    public function host(): BelongsTo
+    public function host()
     {
         return $this->belongsTo(Client::class, 'host_client_id');
     }

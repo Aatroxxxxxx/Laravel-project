@@ -29,7 +29,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>event <em> Website</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2>Event <em> Website</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -68,10 +68,10 @@
           <div class="item item-1">
             <div class="img-fill">
                 <div class="text-content">
-                  <h6>lorem ipsum dolor sit amet!</h6>
-                  <h4>Quam temporibus accusam <br> hic ducimus quia</h4>
-                  <p>Magni deserunt dolorem consectetur adipisicing elit. Corporis molestiae optio, laudantium odio quod rerum maiores, omnis unde quae illo.</p>
-                  <a href="event.html" class="filled-button">Read More</a>
+                  <h6>Trending Events</h6>
+                  <h4>Comic-Con <br> NYC 2023</h4>
+                  <p>With an average of 150,00 people attending Comic-Con daily, it is a jam-packed convention. It's essential to have a plan! Pack snacks, a refillable water bottle, and maybe even Tylenol.</p>
+                  <a href="https://www.yelp.com/biz/new-york-comic-con-new-york" class="filled-button">Read More</a>
                 </div>
             </div>
           </div>
@@ -83,7 +83,7 @@
                   <h6>magni deserunt dolorem harum quas!</h6>
                   <h4>Aliquam iusto harum <br>  ratione porro odio</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa cupiditate mollitia adipisci assumenda laborum eius quae quo excepturi, eveniet. Dicta nulla ea beatae consequuntur?</p>
-                  <a href="about.html" class="filled-button">About Us</a>
+                  <a href="/about" class="filled-button">About Us</a>
                 </div>
             </div>
           </div>
@@ -117,7 +117,7 @@
             <br>
 
             <div class="text-center">
-              <a href="/event.html" class="filled-button">Read More</a>
+              <a href="{{ route('events.index') }}" class="filled-button">Read More</a>
             </div>
 
             <br>

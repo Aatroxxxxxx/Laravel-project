@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Event Website Template</title>
+    <title>Project</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/vendor/bootstrap1/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -59,7 +59,7 @@
                 </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="/event">Event</a>
+                <a class="nav-link" href="/events">Event</a>
               </li>
 
               <li class="nav-item">
@@ -83,7 +83,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Read our Event</h1>
+            <h1>Check out upcoming Events</h1>
             <span>Lorem ipsum dolor sit amet consectetur</span>
           </div>
         </div>
@@ -95,35 +95,25 @@
         <div class="row">
           <div class="col-md-8">
             <section class='tabs-content'>
+            @foreach($recentev as $event)
               <article id='tabs-1'>
-                <img src="{{ asset('assets/img/Event-image-1-940x460.jpg') }}" alt="">
-                <h4><a href="/Event-details">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></h4>
+              <img src="{{ asset('assets/img/' . $event->image . '.jpg') }}" alt="">
+                <h4><a href="/event-details">{{$event->title}}</a></h4>
                 <div style="margin-bottom:10px;">
-                  <span>John Doe &nbsp;|&nbsp; 27.07.2020 10:10 &nbsp;|&nbsp; 15 comments</span>
+                  <span>{{$event->host->lname}} &nbsp;|&nbsp; {{$event->start_datetime}} &nbsp;|&nbsp;</span>
                 </div>
-                <p>Sed ut dolor in augue cursus ultrices. Vivamus mauris turpis, auctor vel facilisis in, tincidunt vel diam. Sed vitae scelerisque orci. Nunc non magna orci. Aliquam commodo mauris ante, quis posuere nibh vestibulum sit amet.</p>
+                <p>{{$event->location}}</p>
                 <br>
                 <div>
-                  <a href="/Event-details" class="filled-button">Continue Reading</a>
+                <a href="{{ route('events.show', ['id' => $event->id]) }}" class="filled-button">Continue Reading</a>
                 </div>
               </article>
+              <br>
+              @endforeach
 
               <br>
-              <br>
-              <br>
+              
 
-              <article id='tabs-2'>
-                <img src="{{ asset('assets/img/Event-image-2-940x460.jpg') }}" alt="">
-                <h4><a href="/Event-details">Mauris lobortis quam id dictum dignissim</a></h4>
-                <div style="margin-bottom:10px;">
-                  <span>John Doe &nbsp;|&nbsp; 27.07.2020 10:10 &nbsp;|&nbsp; 15 comments</span>
-                </div>
-                <p>Sed ut dolor in augue cursus ultrices. Vivamus mauris turpis, auctor vel facilisis in, tincidunt vel diam. Sed vitae scelerisque orci. Nunc non magna orci. Aliquam commodo mauris ante, quis posuere nibh vestibulum sit amet</p>
-                <br>
-                <div>
-                  <a href="/event-details" class="filled-button">Continue Reading</a>
-                </div>
-              </article>
             </section>
           </div>
 
@@ -143,6 +133,7 @@
     @foreach($recentev as $event)
         <li>
             <a href="{{ route('events.show', ['id' => $event->id]) }}">{{ $event->title }}</a>
+            <hr>
         </li>
     @endforeach
 </ul>
@@ -225,8 +216,8 @@
         <div class="row">
           <div class="col-md-12">
             <p>
-                Copyright © 2020 Company Name
-                - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a>
+                Copyright © 2024 Our Company
+                
             </p>
           </div>
         </div>

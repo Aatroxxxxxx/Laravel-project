@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Event Website Template</title>
+    <title>Project</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/vendor/bootstrap1/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -60,7 +60,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/event">Event</a>
+                <a class="nav-link" href="/events">Event</a>
               </li>
 
               <li class="nav-item">
@@ -169,10 +169,10 @@
           <div class="col-md-3 footer-item">
             <h4>Additional Pages</h4>
             <ul class="menu-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Event</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="/clientdashboard">Home</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="{{ route('events.index') }}">Event</a></li>
+              <li><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
           <div class="col-md-3 footer-item last-item">
@@ -213,8 +213,7 @@
         <div class="row">
           <div class="col-md-12">
             <p>
-                Copyright © 2020 Company Name
-                - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a>
+                Copyright © 2024 Our Company 
             </p>
           </div>
         </div>

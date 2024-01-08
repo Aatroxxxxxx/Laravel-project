@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Client extends Model
 {
-    protected $fillable = ['username', 'email', 'password'];
+    protected $fillable = ['fname','lname', 'email', 'password'];
 
     public function hostedEvents(): HasMany
     {
