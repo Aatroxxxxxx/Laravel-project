@@ -5,6 +5,9 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AuthentMiddleware;
+use App\Http\Controllers\AdminController;
+
+use App\Http\Controllers\GoogleLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +35,13 @@ Route::post('/authenticate', function () {
     return view('/clientdashboard', 'cdashboard');
 })->middleware('authent');
 
-
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admindashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    // Add more admin routes as needed
+});
+Route::middleware(['auth', 'admin'])->group(function () {
+    // Admin routes
+});
 
 
 Route::view('/clientdashboard', 'cdashboard');
@@ -62,3 +71,18 @@ Route::get('/event-details', function(){
 
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
 Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
+
+// GoogleLoginController redirect and callback urls
+Route::get('/login/google', [GoogleLoginController::class, 'redirectToGoogle'])->name('auth.google');
+
+Route::get('/login/google/callback', [GoogleLoginController::class, 'handleGoogleCallback']);

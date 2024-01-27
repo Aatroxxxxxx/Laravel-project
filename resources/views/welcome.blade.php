@@ -24,7 +24,7 @@
 
         <nav class="navbar">
           <ul>
-              <li><a href="#">Homepage</a></li>
+              <li><a href="#">Dashboardpage</a></li>
               <li><a href="{{ route('client.create') }}">Sign-in</a></li>
               <li><a href="#">About</a></li>
           </ul>
