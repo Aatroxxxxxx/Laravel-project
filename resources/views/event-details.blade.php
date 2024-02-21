@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style2.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
+    <script src="{{ asset('assets/js/mail.js') }}" ></script>
+    <script src="{{ asset('assets/js/mail2.js') }}" ></script>
   </head>
 
   <body>
@@ -25,25 +27,7 @@
     
 
     <!-- Header -->
-    <div class="sub-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-xs-12">
-            <ul class="left-info">
-              <li><a href="#"><i class="fa fa-envelope"></i>contact@company.com</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>123-456-7890</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    
     
     <header class="">
       <nav class="navbar navbar-expand-lg">
@@ -85,7 +69,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>{{ $event->title }}</h1>
-                <span><i class="fa fa-user"></i> {{ $event->host->fname }} {{$event->host->lname}} &nbsp;|&nbsp; 
+                <span><i class="fa fa-user"></i><a href="{{ route('user.show', ['id' => $event->host->id]) }}"> {{ $event->host->fname }} {{$event->host->lname}}</a> &nbsp;|&nbsp; 
                 <i class="fa fa-calendar"></i> {{ $event->start_datetime }}</span>
             </div>
         </div>
@@ -101,16 +85,11 @@
                 </div>
                 <br>
                 <p>{{ $event->description }}</p>
-
-                <p>{{ $event->additional_information }} </p>
-
-                <h4>{{ $event->additional_heading }}</h4>
+                <iframe width="100%" height="610" src="{{$event->video}}" frameborder="0" allowfullscreen></iframe>
 
                 <br>
 
-                <p>{{ $event->additional_paragraph }}</p>
 
-                <p>{{ $event->additional_paragraph_two }}</p>
             </div>
         </div>
     </div>
@@ -126,112 +105,40 @@
             </div>
           </div>
           <div class="col-md-12">
-            <div class="contact-form">
-              <form id="contact" action="" method="get">
-                <div class="row">
-                  <div class="col-lg-6 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-6 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Submit</button>
-                    </fieldset>
-                  </div>
-                </div>
-              </form>
+          <div class="contact-form">
+          <form id="contact" action="" method="get">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <fieldset>
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <fieldset>
+                  <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
+                </fieldset>
+              </div>
+              
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+                </fieldset>
+              </div>
             </div>
+          </form>
+        </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Footer Starts Here -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 footer-item">
-            <h4>Event Website</h4>
-            <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
-            <ul class="social-icons">
-              <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item">
-            <h4>Useful Links</h4>
-            <ul class="menu-list">
-              <li><a href="#">Vivamus ut tellus mi</a></li>
-              <li><a href="#">Nulla nec cursus elit</a></li>
-              <li><a href="#">Vulputate sed nec</a></li>
-              <li><a href="#">Cursus augue hasellus</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item">
-            <h4>Additional Pages</h4>
-            <ul class="menu-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Event</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item last-item">
-            <h4>Contact Us</h4>
-            <div class="contact-form">
-              <form id="contact footer-contact" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
-                    </fieldset>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-    <div class="sub-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p>
-                Copyright © 2024 Our Company 
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    @extends('layouts.footer')
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top: 70px;">
@@ -334,6 +241,7 @@
           }
       }
     </script>
+    
 
   </body>
 </html>

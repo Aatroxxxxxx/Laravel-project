@@ -78,27 +78,27 @@
           <!-- // Item -->
           <!-- Item -->
           <div class="item item-2">
-            <div class="img-fill">
-                <div class="text-content">
-                  <h6>magni deserunt dolorem harum quas!</h6>
-                  <h4>Aliquam iusto harum <br>  ratione porro odio</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa cupiditate mollitia adipisci assumenda laborum eius quae quo excepturi, eveniet. Dicta nulla ea beatae consequuntur?</p>
-                  <a href="/about" class="filled-button">About Us</a>
-                </div>
-            </div>
-          </div>
+    <div class="img-fill">
+        <div class="text-content">
+            <h6>Our Inspiring Journey</h6>
+            <h4>Empowering Ideas <br> with Innovation</h4>
+            <p>Embark on a remarkable journey with us as we navigate the realms of creativity and technology. We believe in turning visions into reality, pushing boundaries, and crafting digital experiences that leave a lasting impact. Our commitment to excellence is matched only by our passion for innovation. Join us in shaping the future of technology!</p>
+            <a href="/about" class="filled-button">Discover More</a>
+        </div>
+    </div>
+</div>
           <!-- // Item -->
           <!-- Item -->
           <div class="item item-3">
-            <div class="img-fill">
-                <div class="text-content">
-                  <h6>alias officia qui quae vitae natus!</h6>
-                  <h4>Lorem ipsum dolor <br>sit amet, consectetur.</h4>
-                  <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate mi. Sed nec cursus augue. Phasellus lacinia ac sapien vitae dapibus. Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</p>
-                  <a href="/contact" class="filled-button">Contact Us</a>
-                </div>
-            </div>
-          </div>
+    <div class="img-fill">
+        <div class="text-content">
+            <h6>Your Path to Success</h6>
+            <h4>Unlocking Potential <br> through Innovation</h4>
+            <p>Embark on a journey of growth and success with us. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate mi. Sed nec cursus augue. Phasellus lacinia ac sapien vitae dapibus. Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</p>
+            <a href="/contact" class="filled-button">Get in Touch</a>
+        </div>
+    </div>
+</div>
           <!-- // Item -->
         </div>
     </div>
@@ -162,7 +162,7 @@
               <div class="right-content">
                 <span>Who we are</span>
                 <h2>Get to know <em>about us</em></h2>
-                <p>Curabitur pulvinar sem a leo tempus facilisis. Sed non sagittis neque. Nulla conse quat tellus nibh, id molestie felis sagittis ut. Nam ullamcorper tempus ipsum in cursus</p>
+                <p>Embark on a remarkable journey with us as we navigate the realms of creativity and technology. We believe in turning visions into reality, pushing boundaries, and crafting digital experiences that leave a lasting impact. Our commitment to excellence is matched only by our passion for innovation. Join us in shaping the future of technology!</p>
                 <a href="/about" class="filled-button">Read More</a>
               </div>
             </div>
@@ -172,73 +172,7 @@
     </div>
 
     <!-- Footer Starts Here -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 footer-item">
-            <h4>event Website</h4>
-            <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
-            <ul class="social-icons">
-              <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item">
-            <h4>Useful Links</h4>
-            <ul class="menu-list">
-              <li><a href="#">Vivamus ut tellus mi</a></li>
-              <li><a href="#">Nulla nec cursus elit</a></li>
-              <li><a href="#">Vulputate sed nec</a></li>
-              <li><a href="#">Cursus augue hasellus</a></li>
-            </ul>
-          </div>
-          
-          <div class="col-md-3 footer-item last-item">
-            <h4>Contact Us</h4>
-            <div class="contact-form">
-              <form id="contact footer-contact" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
-                    </fieldset>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-    <div class="sub-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p>
-                Copyright © 2024 Company Name
-                
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    @extends('layouts.footer')
 
     <!-- Bootstrap core JavaScript -->
     <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>

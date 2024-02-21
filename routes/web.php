@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AuthentMiddleware;
 use App\Http\Controllers\AdminController;
@@ -54,6 +55,9 @@ Route::post('/signup', [AuthController::class, 'store'])->name('client.store');
 Route::get('/event', function(){
     return view('event');
 });
+Route::get('/user', function(){
+    return view('user');
+});
 Route::get('/about', function(){
     return view('about');
 });
@@ -86,3 +90,7 @@ Route::middleware([
 Route::get('/login/google', [GoogleLoginController::class, 'redirectToGoogle'])->name('auth.google');
 
 Route::get('/login/google/callback', [GoogleLoginController::class, 'handleGoogleCallback']);
+
+
+Route::get('/user', [EventController::class, 'index'])->name('user.index');
+Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show');

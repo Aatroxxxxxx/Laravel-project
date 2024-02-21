@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Project</title>
+    <title>Event Manager</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/vendor/bootstrap1/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -25,10 +25,11 @@
     
 
     <!-- Header -->
+
     
-    
+
     <header class="">
-    <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="/clientdashboard"><h2>Event <em> Website</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +50,7 @@
                 <a class="nav-link" href="/about">About Us</a>
               </li>
 
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="/team">Authors</a>
               </li>
               <li class="nav-item">
@@ -63,80 +64,43 @@
 
     <!-- Page Content -->
     <div class="page-heading header-text">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Team</h1>
-            <span>Our professional team members</span>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ $client->fname }} {{ $client->lname }}'s Profile</h1>
+                    <p style="color:beige">Email: {{ $client->email }}</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
-    <div class="team" style="margin: 0">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2>Our Development <em>Team Members</em></h2>
-              <span>Meet the experts behind our web development</span>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="team-item">
-            <div class="down-content">
-                <h4>GHALEM Mounir</h4>
-                <span>Full Stack Developer</span>
-                <p>Passionate about creating seamless user experiences and bringing ideas to life through code.</p>
-    
-                <p>
-                  <a href="#"><span><i class="fa fa-linkedin"></i></span></a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="team-item">
-            <div class="down-content">
-                <h4>EL HOUSSNI Yahya</h4>
-                <span>Full Stack Developer</span>
-                <p>Turning design concepts into elegant and responsive user interfaces that captivate users.</p>
-                <p>
-                  <a href="#"><span><i class="fa fa-linkedin"></i></span></a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="team-item">
-            <div class="down-content">
-                <h4>DIWANE Aymane</h4>
-                <span>Full Stack Developer</span>
-                <p>Architecting and building robust server-side applications to handle complex functionalities.</p>
-                <p>
-                  <a href="#"><span><i class="fa fa-linkedin"></i></span></a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="team-item">
-              <div class="down-content">
-                <h4>IDEL HOUSSAIN Hassan</h4>
-                <span>UI/UX Developer</span>
-                <p>Crafting visually stunning and intuitive interfaces to enhance user satisfaction.</p>
-                <p>
-                  <a href="#"><span><i class="fa fa-linkedin"></i></span></a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container">
+        <h2>Events Hosted by {{ $client->fname }} {{ $client->lname }}</h2>
+
+        @if ($client && $client->hostedEvents && $client->hostedEvents->count() > 0)
+        <ul>
+          @foreach($client->hostedEvents as $event)
+          <article id='tabs-1'>
+              <img src="{{ asset('assets/img/' . $event->image . '.jpg') }}" alt="">
+                <h4><a href="/event-details">{{$event->title}}</a></h4>
+                <div style="margin-bottom:10px;">
+                  <span>{{$event->host->lname}} &nbsp;|&nbsp; {{$event->start_datetime}} &nbsp;|&nbsp;</span>
+                </div>
+                <p>{{$event->location}}</p>
+                <br>
+                <div>
+                <a href="{{ route('events.show', ['id' => $event->id]) }}" class="filled-button">Continue Reading</a>
+                </div>
+              </article>
+              <br>
+            @endforeach
+        </ul>
+        @else
+        <p>{{ $user->fname }} {{ $user->lname }} has not hosted any events yet.</p>
+        @endif
     </div>
 
     <!-- Footer Starts Here -->
-    
     @extends('layouts.footer')
 
     <!-- Bootstrap core JavaScript -->

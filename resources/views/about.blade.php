@@ -24,25 +24,7 @@
 
     
     <!-- Header -->
-    <div class="sub-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-xs-12">
-            <ul class="left-info">
-              <li><a href="#"><i class="fa fa-envelope"></i>contact@company.com</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>123-456-7890</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
     <header class="">
       <nav class="navbar navbar-expand-lg">
@@ -98,10 +80,11 @@
               <div class="row">
                 <div class="col-md-6 align-self-center">
                   <div class="right-content">
-                    <span>Lorem ipsum dolor sit amet</span>
-                    <h2>Get to know about <em>our company</em></h2>
-                    <p>Fusce nec ultrices lectus. Duis nec scelerisque risus. Ut id tempor turpis, ac dignissim ipsum. Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem. 
-                    <br><br>Pellentesque in sagittis lacus, vel auctor sem. Quisque eu quam eleifend, ullamcorper dui nec, luctus quam.</p>
+                    <span>Meet our tight-knit group of full-stack developers</span>
+                    <h2>Get to know about <em>our Team</em></h2>
+                    <p>a tech-savvy squad with a flair for turning ideas into digital masterpieces. We excel in both front-end finesse and back-end prowess, crafting seamless and innovative solutions.
+                    <br><br>Together, we bring a blend of creativity and technical acumen to every project, ensuring a holistic approach to web development. With a passion for staying ahead in the tech game, 
+                    our team is ready to transform your concepts into cutting-edge digital experiences.</p>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -121,36 +104,29 @@
         <div class="row">
           <div class="col-md-6">
             <div class="left-content">
-              <span>Lorem ipsum dolor sit amet</span>
-              <h2>Modi esse sapiente tenetur <em>impedit laudantium laborum</em></h2>
-              <p>Pellentesque ultrices at turpis in vestibulum. Aenean pretium elit nec congue elementum. Nulla luctus laoreet porta. Maecenas at nisi tempus, porta metus vitae, faucibus augue. 
-              <br><br>Fusce et venenatis ex. Quisque varius, velit quis dictum sagittis, odio velit molestie nunc, ut posuere ante tortor ut neque.</p>
+            Our dynamic <em>Group </em>of full-stack developers represents a collective powerhouse of technical 
+            expertise and creativity. With a passion for crafting seamless and innovative solutions, 
+            we thrive on the challenges of both front-end and back-end development. From building 
+            intuitive user interfaces that captivate audiences to architecting robust server-side 
+            applications, our team excels in the entire web development stack. Collaborative and driven, 
+            we leverage our diverse skill set to turn ideas into functional and aesthetically 
+            pleasing digital experiences. With a commitment to staying at the forefront of technology, 
+            our group is poised to tackle any project, turning visions into reality through the art and 
+            science of full-stack development.
             </div>
           </div>
           <div class="col-md-6 align-self-center">
             <div class="row">
               <div class="col-md-6">
                 <div class="count-area-content">
-                  <div class="count-digit">100000</div>
-                  <div class="count-title">Words</div>
+                  <div class="count-digit">2 years</div>
+                  <div class="count-title">Working together</div>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="count-area-content">
-                  <div class="count-digit">1280</div>
-                  <div class="count-title">Articles</div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="count-area-content">
-                  <div class="count-digit">12</div>
-                  <div class="count-title">Awards</div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="count-area-content">
-                  <div class="count-digit">26</div>
-                  <div class="count-title">Trending</div>
+                  <div class="count-digit">Different </div>
+                  <div class="count-title">Subjects</div>
                 </div>
               </div>
             </div>
@@ -160,80 +136,7 @@
     </div>
 
     <!-- Footer Starts Here -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 footer-item">
-            <h4>Event Website</h4>
-            <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
-            <ul class="social-icons">
-              <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item">
-            <h4>Useful Links</h4>
-            <ul class="menu-list">
-              <li><a href="#">Vivamus ut tellus mi</a></li>
-              <li><a href="#">Nulla nec cursus elit</a></li>
-              <li><a href="#">Vulputate sed nec</a></li>
-              <li><a href="#">Cursus augue hasellus</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item">
-            <h4>Additional Pages</h4>
-            <ul class="menu-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Event</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item last-item">
-            <h4>Contact Us</h4>
-            <div class="contact-form">
-              <form id="contact footer-contact" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
-                    </fieldset>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-    <div class="sub-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p>
-                Copyright © 2020 Company Name
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    @extends('layouts.footer')
 
     <!-- Bootstrap core JavaScript -->
     <script src="{{ asset ('assets/vendor/jquery/jquery.min.js') }}"></script>
